@@ -1,9 +1,8 @@
 import SignInOutButton from "./SignInOutButton";
-import classes from "./NavBar.module.css";
 
 function NavBar() {
   return (
-    <nav className={classes.navBar}>
+    <nav className="navBar">
       <h1>JS Dojo</h1>
       <ul>
         <li>

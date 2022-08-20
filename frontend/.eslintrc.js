@@ -36,7 +36,6 @@ module.exports = {
   ],
   plugins: ["react", "@typescript-eslint", "import", "jsx-a11y", "react-hooks"],
   rules: {
-    quotes: ["error", "double"],
     "import/no-unresolved": 0,
     "require-jsdoc": 0,
     "spaced-comment": ["error", "always", { markers: ["/"] }],
