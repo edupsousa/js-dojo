@@ -1,10 +1,10 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyBoy7-RjfC5zqxbcqGpYXPZx9ttYr797vI",
-  authDomain: "js-dojo-33166.firebaseapp.com",
-  databaseURL: "https://js-dojo-33166-default-rtdb.firebaseio.com",
-  projectId: "js-dojo-33166",
-  storageBucket: "js-dojo-33166.appspot.com",
-  messagingSenderId: "80893925243",
-  appId: "1:80893925243:web:dfc91d9df52a62480ecfde",
-  measurementId: "G-KVPB05Q52Z",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
