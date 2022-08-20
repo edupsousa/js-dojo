@@ -1,0 +1,11 @@
+.signInButton,
+.signOutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+}
+.signOutButton > img {
+  max-height: 2.5rem;
+  border-radius: 2.5rem;
+}

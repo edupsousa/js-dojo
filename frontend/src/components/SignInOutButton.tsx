@@ -1,6 +1,7 @@
 import { onAuthStateChanged, signInWithRedirect, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { firebaseAuth, googleAuthProvider } from "../firebase/auth";
+import classes from "./SignInOutButton.module.css";
 
 function SignInOutButton() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -21,14 +22,18 @@ function SignInOutButton() {
 
   if (isAuthenticated) {
     return (
-      <button onClick={() => signOut(firebaseAuth)}>
-        {photoURL && <img src={photoURL} alt={displayName || ""} />}
+      <button
+        className={classes.signOutButton}
+        onClick={() => signOut(firebaseAuth)}
+      >
         Sair {displayName && `(${displayName})`}
+        {photoURL && <img src={photoURL} alt={displayName || ""} />}
       </button>
     );
   } else {
     return (
       <button
+        className={classes.signInButton}
         onClick={() => signInWithRedirect(firebaseAuth, googleAuthProvider)}
       >
         Entrar
