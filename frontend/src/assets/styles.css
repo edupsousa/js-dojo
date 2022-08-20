@@ -26,11 +26,19 @@ code {
 
 .app {
   height: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 5rem 2fr 1fr;
+  grid-template-areas:
+    "header     header"
+    "main-left  main-right"
+    "footer     footer";
 }
 
 /* NavBar */
 
 .navBar {
+  grid-area: header;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,6 +61,23 @@ code {
   text-decoration: underline;
 }
 
+/* DojoEditor */
+
+.dojoEditor {
+  grid-area: main-left;
+  font-family: "Fira code", "Fira Mono", monospace;
+  background-color: #2d2d2d;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* DojoUtils */
+
+.dojoUtils {
+  grid-area: main-right;
+  border-left: 1px solid #e6e6e6;
+}
+
 /* SignInOutButton */
 
 .signInButton,
@@ -65,4 +90,11 @@ code {
 .signOutButton > img {
   max-height: 2.5rem;
   border-radius: 2.5rem;
+}
+
+/* DojoChat */
+
+.dojoChat {
+  grid-area: footer;
+  border-top: 1px solid #e6e6e6;
 }

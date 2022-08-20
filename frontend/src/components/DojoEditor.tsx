@@ -1,22 +1,19 @@
 import Editor from "react-simple-code-editor";
-import Prism from "prismjs";
-import "prismjs/themes/prism.css";
+import { highlight, languages } from "prismjs";
 import { useState } from "react";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-javascript";
+import "prismjs/themes/prism-tomorrow.css";
 
 function DojoEditor() {
   const [code, setCode] = useState("function add(a, b) {\n  return a + b;\n}");
   return (
     <Editor
+      className="dojoEditor"
       value={code}
       onValueChange={(code) => setCode(code)}
-      highlight={(code) =>
-        Prism.highlight(code, Prism.languages.javascript, "javascript")
-      }
+      highlight={(code) => highlight(code, languages.javascript, "javascript")}
       padding={10}
-      style={{
-        fontFamily: '"Fira code", "Fira Mono", monospace',
-        fontSize: 12,
-      }}
     />
   );
 }
