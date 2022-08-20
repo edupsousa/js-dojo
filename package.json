@@ -1,0 +1,24 @@
+{
+  "name": "js-dojo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-tools": "^11.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edupsousa/js-dojo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edupsousa/js-dojo/issues"
+  },
+  "homepage": "https://github.com/edupsousa/js-dojo#readme"
+}
