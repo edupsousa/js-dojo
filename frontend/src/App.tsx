@@ -1,15 +1,9 @@
-import DojoChat from "./components/DojoChat";
-import DojoEditor from "./components/DojoEditor";
-import DojoUtils from "./components/DojoUtils";
-import NavBar from "./components/NavBar";
+import DojoPage from "./components/DojoPage";
 
 function App() {
   return (
     <div className="app">
-      <NavBar />
-      <DojoEditor />
-      <DojoUtils />
-      <DojoChat />
+      <DojoPage />
     </div>
   );
 }
