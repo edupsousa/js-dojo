@@ -1,3 +1,6 @@
+:root {
+  --light-border-color: #e6e6e6;
+}
 *,
 *::before,
 *::after {
@@ -44,7 +47,6 @@ code {
   align-items: center;
   padding: 0.5rem 1rem;
   background-color: #fff;
-  border-bottom: 1px solid #e6e6e6;
 }
 .navBar > ul {
   display: flex;
@@ -75,7 +77,39 @@ code {
 
 .dojoUtils {
   grid-area: main-right;
-  border-left: 1px solid #e6e6e6;
+  border-left: 1px solid var(--light-border-color);
+}
+
+.dojoUtils .tabs {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.dojoUtils .tabs li {
+  border: 1px solid var(--light-border-color);
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-left: none;
+  flex-grow: 1;
+}
+
+.dojoUtils .tabs li.active {
+  border-bottom: none;
+}
+
+.dojoUtils .tabs li:first-child {
+  border-left: 1px solid var(--light-border-color);
+}
+
+.dojoUtils .tabs button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* SignInOutButton */
@@ -96,5 +130,25 @@ code {
 
 .dojoChat {
   grid-area: footer;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid var(--light-border-color);
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.dojoChat > .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dojoChat > .header > h2 {
+  margin: 0;
+}
+
+.dojoChat > .messages {
+  flex-grow: 1;
+  overflow-y: scroll;
+  margin: 0.25rem 0;
 }
