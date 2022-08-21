@@ -1,5 +1,6 @@
 :root {
   --light-border-color: #e6e6e6;
+  --darker-border-color: #a6a6a6;
 }
 *,
 *::before,
@@ -141,14 +142,49 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5rem 0;
 }
 
 .dojoChat > .header > h2 {
   margin: 0;
+  flex-grow: 1;
 }
 
-.dojoChat > .messages {
+.dojoChat .messages {
   flex-grow: 1;
   overflow-y: scroll;
   margin: 0.25rem 0;
+}
+
+.dojoChat ul {
+  padding: 0 0.5rem;
+}
+
+.dojoChat .messages li {
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+.dojoChat .from::after {
+  content: ":";
+  margin-right: 0.5rem;
+}
+
+.dojoChat form {
+  flex-grow: 1;
+  display: flex;
+}
+
+.dojoChat form input {
+  padding: 0.5rem 0.5rem;
+  flex-grow: 2;
+  border-radius: 0.25rem;
+  border: 1px solid var(--darker-border-color);
+}
+
+.dojoChat form button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--darker-border-color);
+  border-radius: 0.25rem;
 }
